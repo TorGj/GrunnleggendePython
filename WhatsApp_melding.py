@@ -7,13 +7,14 @@ import datetime as dt
 # Gjør om til int og bruk variablen i msg..
 # pySimpleGUI?
 v = WhatsAppGUI.GUI()
+print(v)
 
 if str(v[2]) == 'True':
     t = int(dt.datetime.today().strftime("%-H"))
     m = int(dt.datetime.today().strftime("%-M"))+1
 else:
-    t = int(str(v[3]))
-    m = int(str(v[4]))
+    t = int(str(v[4]))
+    m = int(str(v[5]))
 
 nr = '+47'+str(v[0])
 mld = str(v[1])

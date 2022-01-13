@@ -11,6 +11,7 @@ def GUI():
     #Definer Window
     window = psg.Window('Send WhatsApp-melding', layoutA)
     e, v = window.read()
+    print(e, v)
     window.close()
 
     svar = list(v.values())

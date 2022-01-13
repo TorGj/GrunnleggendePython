@@ -1,12 +1,43 @@
-# Kun en kommentar, ingenting skjer...
+print('Hello world')
 
-"""   (3 stk " etterhverandre, 3 stk ' funker også..
-Her er en
-laaaaaaaang kommmentar..
-som strekker seg over mange linjer.
-"""
+x = 'Hvordan har du det?'
+y = 10
+z = 'Bra'
+a = x + z
+b = True
+lis = []
 
-'''
-En like laaaang kommentar... det eneste jeg ikke kan skrive her 
-er 3 stk (eller flere) ' etter hverandre.
-'''
+elever = ['Haidas', 'Erik', 'Bendik']
+larer = ['Tor', 'Johannes', 'Mats']
+
+while b:
+    # print(y)
+    y = y + 1
+    lis.append(y)
+    if y > 100:
+        # break
+        b = False
+lis[5] = 'hest'
+
+elevlarer = []
+
+elevlarer.append(elever)
+elevlarer.append(larer)
+
+print(elevlarer)
+
+print(len(lis))
+
+
+print(lis)
+
+
+
+print(type(y))
+print(type(x))
+print(type(b))
+print(type(lis))
+print(x)
+print(a)
+
+
