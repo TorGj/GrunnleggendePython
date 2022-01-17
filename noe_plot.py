@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 import numpy as np
+import pandas as pd
 
 """
     Embedding the Matplotlib toolbar into your application
@@ -54,12 +55,19 @@ layout = [
 
 window = sg.Window('Graph with controls', layout)
 
+
+data = pd.read_csv("reiser.csv", index_col = 0, skiprows = (0,1), sep = ";", encoding = "latin-1")
+data = data.transpose()
+
+
+
 while True:
     event, values = window.read()
     print(event, values)
     if event in (sg.WIN_CLOSED, 'Exit'):  # always,  always give a way out!
         break
     elif event == 'Plot':
+        plt.plot(data)
         # ------------------------------- PASTE YOUR MATPLOTLIB CODE HERE
         plt.figure(1)
         fig = plt.gcf()
@@ -67,14 +75,14 @@ while True:
         # ------------------------------- you have to play with this size to reduce the movement error when the mouse hovers over the figure, it's close to canvas size
         fig.set_size_inches(404 * 2 / float(DPI), 404 / float(DPI))
         # -------------------------------
-        x = np.linspace(0, 2 * np.pi)
+        """x = np.linspace(0, 2 * np.pi)
         y = np.sin(x)
         plt.plot(x, y)
         plt.title('y=sin(x)')
         plt.xlabel('X')
         plt.ylabel('Y')
         plt.grid()
-
+        """
         # ------------------------------- Instead of plt.show()
         draw_figure_w_toolbar(window['fig_cv'].TKCanvas, fig, window['controls_cv'].TKCanvas)
 

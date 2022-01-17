@@ -7,9 +7,9 @@ sg.theme("DarkTanBlue")
 kolonne_1 = [[sg.Text('Kolonne A1 R1 1'), sg.Text('Kolonne A1 R1 2')],
             [sg.Text('Kolonne A1 R2 1'), sg.Text('Kolonne A1 R2 2')] ]
 
-kolonne_2 = [[sg.Text('Kolonne B1 1'), sg.Text('Kolonne B1 2')]]
+kolonne_2 = [[sg.Text('Kolonne B1 1'), sg.Text('Kolonne B1 2')] ]
 
-kolonne_3 = [[sg.Text('Kolonne C1 1')], [sg.Text('Kolonne C1 2')]]
+kolonne_3 = [[sg.Text('Kolonne C1 1')], [sg.Text('Kolonne C1 2')] ]
 # **************************************************************************************
 
 
