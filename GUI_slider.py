@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-# En kommentar
+# En ny kommentar
 layout = [
     [sg.Slider(range=(1,20), resolution=1, orientation='horizontal', enable_events=True, key='-NUM-')],
     [sg.Frame('Frame', [[sg.Text("a big number".ljust(30), key='-TEXT-')]])]
