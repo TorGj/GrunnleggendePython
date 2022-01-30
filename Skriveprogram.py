@@ -26,12 +26,27 @@ def test(p, u, s, t):
         print('stavefeil')
 
 
-def lagre(resultat):
-    with open('Tor.txt', 'a') as f:
+def lagre(resultat, bruker):
+    with open('%s.txt' % bruker, 'w') as f:
         f.writelines(str(resultat))
         f.write('\n')
-    f.close()
+    f.close()           # Close file to allow other to access file
+
+def les_fil(bruker):
+    min_fil = open('%s.txt' % bruker, 'r')
+    innhold = min_fil.read()
+    min_fil.close()     # Close file to allow other to access file
+    return innhold
+
+
+def vis_stats(bruker, ord):
+    print('Tidligere resultater for:', ord)
+    innhold = les_fil(bruker)
+
+    print(innhold)
+
 
 res_ultat = test(v_ord, navn, b_ord, t_ord)
+vis_stats(navn, v_ord)
 
-lagre(res_ultat)
+lagre(res_ultat, navn)
