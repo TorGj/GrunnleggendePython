@@ -33,7 +33,10 @@ while navn[n] != 'Romandus':
 # poppe navn
 while len(navn) > 2:
     print(navn)
-    navn.pop(1)
+    utpoppa = navn.pop(1)    # Kaster/sender listeinnhold ut av lista, og lager en ny liste med samme navn.
+    print('utpoppa', utpoppa)
 
+foo()
+foo()
 foo()
 foo()
