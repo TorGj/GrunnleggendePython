@@ -1,10 +1,15 @@
+import time
+import matplotlib.pyplot as plt
+
 def foo():
-    i = int(0)      # Her dikterer jeg at
+    i = int(0)      # Her dikterer jeg at variablen i skal være en Int
     while i < 10:
         print(i)
         i = i + 1
-        if i == 8:
+        if i == 8:  #
             break
+
+
 
 
 fortsett = True
@@ -13,6 +18,7 @@ while fortsett:
     fortsett = False
 
 foo()
+
 
 a = 'greit'
 b = str('ok')
@@ -37,6 +43,23 @@ while len(navn) > 2:
     print('utpoppa', utpoppa)
 
 foo()
-foo()
-foo()
-foo()
+
+n = 1
+T=[]
+N =[]
+gogo = True
+while gogo:
+    tic = time.perf_counter()
+    n = n + 1
+    if n == 100:
+        break
+    toc = time.perf_counter()
+    T.append(toc-tic)
+    N.append(n)
+
+plt.ylim(0, 0.000001)  # Max "høyeste pris i datasettet" øre på yakse
+plt.bar(N,T, color='green')
+plt.yscale('linear')  # Defines log/linear scale
+plt.xlabel('x-tingy')
+plt.show()
+

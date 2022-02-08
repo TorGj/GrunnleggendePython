@@ -3,7 +3,6 @@ import time
 import random
 
 navn = input('Hvem er du?')
-
 ordliste =['hest', 'vanlig', 'kanin', 'friminutt', 'ferie', 'is', 'sol']
 
 # kommandoen CHOICES returnerer en liste, selv om antall elementer er ett.
@@ -13,6 +12,7 @@ v_ord = random.choices(ordliste, k=1)[0]
 a = time.perf_counter()
 b_ord = input('Skriv: {}  :'.format(v_ord))
 t_ord = time.perf_counter() - a
+
 
 def test(p, u, s, t):
     if p == s:
@@ -32,6 +32,7 @@ def lagre(resultat, bruker):
         f.write('\n')
     f.close()           # Close file to allow other to access file
 
+
 def les_fil(bruker):
     min_fil = open('%s.txt' % bruker, 'r')
     innhold = min_fil.read()
@@ -40,13 +41,13 @@ def les_fil(bruker):
 
 
 def vis_stats(bruker, ord):
-    print('Tidligere resultater for:', ord)
+    print(bruker, ': tidligere resultater for:', ord)
     innhold = les_fil(bruker)
-
     print(innhold)
 
 
 res_ultat = test(v_ord, navn, b_ord, t_ord)
+
 vis_stats(navn, v_ord)
 
 lagre(res_ultat, navn)

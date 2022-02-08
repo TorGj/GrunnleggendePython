@@ -3,10 +3,12 @@ navn = ['Tor', 'Ole', 'Ola', 'Per', 'Odd', 'Jan', 'Tom', 'Are',
         'Liv', 'Ann', 'Gry', 'Oda', 'Sia', 'Lea', 'Lan',
         'Eli', 'Eva', 'Mia', 'Ine', 'Fia', '']
 
-print(len(navn))
+print('Lengde på lista:', len(navn))
 
 for ele in navn:
     print(ele, end=' ')
+
+
 
 
 
@@ -17,16 +19,27 @@ for i in range(len(navn)):
 
 print('')
 
+
+
+
+
+
 for i in range(3, 13, 2):
     print(navn[i], end='.')
 
 
-print('')
-tall = [6, 5, 3, 8, 4, 2, 5, 4, 11]
-sum = 0
 
-for verdi in tall:
-    sum = sum + verdi
 
-print("Summen er: ", sum)
 
+def summere_verdi_av_elementer_i_liste():
+    print('')  # Lager ny linje ..... her er ny For-løkke
+    tall = [6, 5, 3, 8, 4, 2, 5, 4, 11]
+    sum = 0
+
+    for verdi in tall:
+        sum = sum + verdi
+    print("Summen er: ", sum)
+
+#while True:
+    summere_verdi_av_elementer_i_liste()
+summere_verdi_av_elementer_i_liste()
