@@ -1,7 +1,7 @@
 import random
 
 antall = int(input('Hvor mange skal trekkes? '))
-navn = ['ole', 'bolle', 'odd', 'frank', 'jens']
+navn = ['ole', 'bård', 'odd', 'frank', 'jens']
 
 def trekk_tilfeldig(n):
     trekk = random.sample(navn, n)
