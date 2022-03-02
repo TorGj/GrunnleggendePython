@@ -25,7 +25,7 @@ def test(p, u, s, t):
     else:
         print('stavefeil')
 
-
+# dfdfdf
 def lagre(resultat, bruker):
     with open('%s.txt' % bruker, 'w') as f:
         f.writelines(str(resultat))
